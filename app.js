@@ -8,15 +8,14 @@ const port = 3000;
 
 // Database connection
 const pool = new Pool({
-    user: 'root', // Replace with your PostgreSQL username
+    user: 'root', 
     host: 'localhost',
     database: 'blogdb',
-    password: 'password', // Replace with your PostgreSQL password
-    port: 5432
+    password: 'password', 
 });
 
 app.use(session({
-    secret: 'secret', // Replace with a secure secret key
+    secret: 'secret',
     resave: false,
     saveUninitialized: true,
     cookie: {
