@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Application</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Blog Posts</h1>
+    <div class="blog-posts">
+        <a href="/create-post">Create New Post</a>
+        <a href="/signout">Logout</a>
+        <% for (let blog of blogs) { %>
+            <div class="blog-post">
+                <h2><%= blog.title %></h2>
+                <p>By: <%= blog.creator_user_id %></p>
+                <p><%= blog.body %></p>
+                <p>Created on: <%= blog.date_created %></p>
+                <a href="/edit-post/<%= blog.blog_id %>">Edit</a>
+                <a href="/delete-post/<%= blog.blog_id %>">Delete</a>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

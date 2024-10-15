@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Post</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Are you sure you want to delete this post?</h1>
+    <p>Title: <%= blog.title %></p>
+    <form action="/delete-post/<%= blog.blog_id %>" method="post">
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>
